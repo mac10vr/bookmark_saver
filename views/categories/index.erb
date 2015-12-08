@@ -1,0 +1,17 @@
+<a href='/url/new'> new url </a>
+
+<ul>
+  <% @urls.each do |url| %>
+  <li>
+    <%= url.name %>
+    <a href='/urls/<%=url.id%>/edit'> edit </a>
+    <form action='/urls/<%=url.id%>/delete' method='post'>
+      <button> delete </button>
+    </form>
+  </li>
+  <% end %>
+</ul>
+
+
+
+
